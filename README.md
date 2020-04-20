@@ -1,0 +1,1 @@
+This is the repo for the team project of cs645 spring 2020. It is based on the paper: Automatic Database Management System Tuning Through Large-scale Machine Learning with result replication and method extention.
