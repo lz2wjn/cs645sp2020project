@@ -216,6 +216,8 @@ def PredictMAPEwithoutGroundTruth(workload_target,predGPRmodelList,dscalar,cente
         tmp_min = dscalar.data_min_[12]
         tmp_predict = predGPRmodelList[i].predict(tmp_target_config)
         tmp_predict_re = latencyScalar.inverse_transform(tmp_predict)
+        if tmp_predict_re < tmp_min:
+            tmp_predict_re = np.array([[tmp_min]])
         predictList.append(tmp_predict_re)
         
     return predictList
